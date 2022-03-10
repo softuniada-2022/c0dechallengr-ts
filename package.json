@@ -1,0 +1,35 @@
+{
+    "name": "c0dechallengr",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Nikolay Gruychev <nickick@nickick.tk>",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "server",
+        "vue"
+    ],
+    "scripts": {
+        "dev": "concurrently --kill-others \"yarn server-dev\" \"yarn vue-dev\"",
+        "vue-lint": "eslint vue --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path vue/.gitignore",
+        "server-lint": "eslint server --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path server/.gitignore",
+        "lint": "yarn vue-lint && yarn server-lint",
+        "vue-dev": "cd vue && yarn dev",
+        "vue-build": "cd vue && yarn build",
+        "vue-preview": "cd vue && yarn preview",
+        "vue-typecheck": "cd vue && yarn typecheck",
+        "server-start": "cd server && yarn start",
+        "server-dev": "cd server && yarn dev",
+        "server-typecheck": "cd server && yarn typecheck",
+        "typeorm": "cd server && yarn typeorm"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.1.0",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "@vue/eslint-config-typescript": "^10.0.0",
+        "concurrently": "^7.0.0",
+        "eslint": "^8.5.0",
+        "eslint-plugin-vue": "^8.2.0",
+        "prettier": "^2.5.1"
+    }
+}

@@ -1,0 +1,88 @@
+@import url(https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css);
+
+:root {
+  --c0-c-white: #ffffff;
+  --c0-c-black: #111111;
+  --c0-c-gray: #bdbdbd;
+  --c0-c-dark-gray: #757575;
+  --c0-c-green: #4caf50;
+  --c0-c-red: #f44336;
+  --c0-c-background: var(--c0-c-black);
+  --c0-c-primary: #8e55ff;
+  --c0-c-secondary: #a988eb;
+  --c0-c-tertiary: #d0b9fd;
+  --c0-c-like: #da27fc;
+  --c0-font-family: "Hack", monospace;
+  --c0-font-size: auto;
+  --c0-button-padding: 14px;
+  --c0-button-sm-padding: 0.5em;
+  --c0-border-radius: 0.25em;
+}
+
+body {
+  background-color: var(--c0-c-background);
+  color: var(--c0-c-primary);
+  font-family: var(--c0-font-family);
+  font-size: var(--c0-font-size);
+  word-wrap: break-word;
+  margin: auto;
+  padding: 1em;
+  max-width: 64em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c0-c-secondary);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--c0-c-tertiary);
+}
+
+hr {
+  border-color: var(--c0-c-primary);
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="checkbox"] {
+  background-color: var(--c0-c-background);
+  color: var(--c0-c-secondary);
+  accent-color: var(--c0-c-secondary);
+  border-color: var(--c0-c-secondary);
+  border-style: solid;
+  border-radius: var(--c0-border-radius);
+  font-family: var(--c0-font-family);
+  font-size: var(--c0-font-size);
+}
+
+button:not([class^="Vue-Toastification"]),
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+select,
+option {
+  background-color: var(--c0-c-secondary);
+  padding: var(--c0-button-sm-padding);
+  border-radius: var(--c0-border-radius);
+  font-family: var(--c0-font-family);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover:not([class^="Vue-Toastification"]),
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+select:hover,
+option:hover {
+  background-color: var(--c0-c-tertiary);
+}
+
+.bordered-container {
+  border: 6px double var(--c0-c-primary);
+  padding: 1em;
+}
